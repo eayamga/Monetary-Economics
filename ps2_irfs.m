@@ -15,7 +15,7 @@ irf_a = oo_.irfs.a_e_a;
 
 
 % Number of periods to plot
-nPeriods = 10;
+nPeriods = 40;
 
 % Creating a figure using tiledlayout
 figure;
@@ -101,7 +101,7 @@ irf_a = oo_.irfs.a_e_m;
 irf_k = oo_.irfs.k_e_m;
 
 % Number of periods to plot
-nPeriods = 10;
+nPeriods = 40;
 
 % Creating a figure using tiledlayout
 figure;
