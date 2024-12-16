@@ -25,14 +25,6 @@ pinfobs_to_ea_median = oo_.PosteriorIRF.dsge.Median.pinfobs_ea;
 robs_to_ea_median = oo_.PosteriorIRF.dsge.Median.robs_ea;
 labobs_to_ea_median = oo_.PosteriorIRF.dsge.Median.labobs_ea;
 
-%Posterior Mode
-dy_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.dy_ea;
-dc_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.dc_ea;
-dinve_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.dinve_ea;
-dw_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.dw_ea;
-pinfobs_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.pinfobs_ea;
-robs_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.robs_ea;
-labobs_to_ea_mode = oo_.PosteriorIRF.dsge.Mode.labobs_ea;
 
 
 
@@ -41,7 +33,7 @@ nPeriods = 40;
 
 % Creating a figure using tiledlayout
 figure;
-tiledlayout(7, 3);  % 4x2 grid for 7 variables
+tiledlayout(2, 7);  % 4x2 grid for 7 variables
 
 % Ploting IRF for output (y)
 nexttile;
@@ -152,59 +144,6 @@ xlabel('Periods');
 ylabel('Deviation');
 
 
-% Ploting IRF for output (y)
-nexttile;
-plot(1:nPeriods, dy_to_ea_mode, 'LineWidth', 2);
-title('IRF of Output (dy)');
-xlabel('Periods');
-ylabel('Deviation');
-
-%Plotting IRF for consumption
-nexttile;
-plot(1:nPeriods, dc_to_ea_mode, 'LineWidth', 2);
-title('IRF of consumption (dc)');
-xlabel('Periods');
-ylabel('Deviation');
-
-%Plotting IRF for Investment
-nexttile;
-plot(1:nPeriods, dinve_to_ea_mode, 'LineWidth', 2);
-title('IRF of Investment (dinve)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for wage
-nexttile;
-plot(1:nPeriods, dw_to_ea_mode, 'LineWidth', 2);
-title('IRF of wage (dw)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for Inflation rate
-nexttile;
-plot(1:nPeriods, pinfobs_to_ea_mode, 'LineWidth', 2);
-title('IRF of Inflation rate (pinfobs)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for Federal funds rate
-nexttile;
-plot(1:nPeriods, dc_to_ea_mode, 'LineWidth', 2);
-title('IRF of federal funds rate (robs)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for labor hours
-nexttile;
-plot(1:nPeriods, dc_to_ea_mode, 'LineWidth', 2);
-title('IRF of labor hours (labobs)');
-xlabel('Periods');
-ylabel('Deviation'
-
 
 
 % Adjust layout for better spacing
@@ -245,14 +184,6 @@ robs_to_eqs_median = oo_.PosteriorIRF.dsge.Median.robs_eqs;
 labobs_to_eqs_median = oo_.PosteriorIRF.dsge.Median.labobs_eqs;
 
 
-%Posterior median
-dy_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.dy_eqs;
-dc_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.dc_eqs;
-dinve_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.dinve_eqs;
-dw_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.dw_eqs;
-pinfobs_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.pinfobs_eqs;
-robs_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.robs_eqs;
-labobs_to_eqs_mode = oo_.PosteriorIRF.dsge.Mode.labobs_eqs;
 
 
 % Number of periods to plot
@@ -260,7 +191,7 @@ nPeriods = 40;
 
 % Creating a figure using tiledlayout
 figure;
-tiledlayout(7, 3);  % 4x2 grid for 7 variables
+tiledlayout(2, 7);  % 4x2 grid for 7 variables
 
 % Ploting IRF for output (y)
 nexttile;
@@ -370,58 +301,7 @@ xlabel('Periods');
 ylabel('Deviation');
 
 
-% Ploting IRF for output (y)
-nexttile;
-plot(1:nPeriods, dy_to_eqs_mode, 'LineWidth', 2);
-title('IRF of Output to investment specific technology shock (dy)');
-xlabel('Periods');
-ylabel('Deviation');
 
-%Plotting IRF for consumption
-nexttile;
-plot(1:nPeriods, dc_to_eqs_mode, 'LineWidth', 2);
-title('IRF of consumption to investment specific technology shock (dc)');
-xlabel('Periods');
-ylabel('Deviation');
-
-%Plotting IRF for Investment
-nexttile;
-plot(1:nPeriods, dinve_to_eqs_mode, 'LineWidth', 2);
-title('IRF of Investment to investment specific technology shock (dinve)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for wage
-nexttile;
-plot(1:nPeriods, dw_to_eqs_mode, 'LineWidth', 2);
-title('IRF of wage to investment specific technology shock (dw)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for Inflation rate
-nexttile;
-plot(1:nPeriods, pinfobs_to_eqs_mode, 'LineWidth', 2);
-title('IRF of Inflation rate to investment specific technology shock (pinfobs)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for Federal funds rate
-nexttile;
-plot(1:nPeriods, dc_to_eqs_mode, 'LineWidth', 2);
-title('IRF of federal funds rate to investment specific technology shock (robs)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for labor hours
-nexttile;
-plot(1:nPeriods, dc_to_eqs_mode, 'LineWidth', 2);
-title('IRF of labor hours to investment specific technology shock (labobs)');
-xlabel('Periods');
-ylabel('Deviation');
 
 % Adjust layout for better spacing
 sgtitle('Impulse Response Functions to a Investment Specific Technology Shock');
@@ -451,15 +331,6 @@ robs_to_em_median = oo_.PosteriorIRF.dsge.Median.robs_em;
 labobs_to_em_median = oo_.PosteriorIRF.dsge.Median.labobs_em;
 
 
-%Posterior mode
-dy_to_em_mode = oo_.PosteriorIRF.dsge.Mode.dy_em;
-dc_to_em_mode = oo_.PosteriorIRF.dsge.Mode.dc_em;
-dinve_to_em_mode = oo_.PosteriorIRF.dsge.Mode.dinve_em;
-dw_to_em_mode = oo_.PosteriorIRF.dsge.Mode.dw_em;
-pinfobs_to_em_mode = oo_.PosteriorIRF.dsge.Mode.pinfobs_em;
-robs_to_em_mode = oo_.PosteriorIRF.dsge.Mode.robs_em;
-labobs_to_em_mode = oo_.PosteriorIRF.dsge.Mode.labobs_em;
-
 
 
 % Number of periods to plot
@@ -467,7 +338,7 @@ nPeriods = 40;
 
 % Creating a figure using tiledlayout
 figure;
-tiledlayout(7, 3);  % 4x2 grid for 7 variables
+tiledlayout(2, 7);  % 4x2 grid for 7 variables
 
 % Ploting IRF for output (y)
 nexttile;
@@ -579,58 +450,7 @@ ylabel('Deviation');
 
 
 
-% Ploting IRF for output (y)
-nexttile;
-plot(1:nPeriods, dy_to_em_mode, 'LineWidth', 2);
-title('IRF of Output to monetary policy shock (dy)');
-xlabel('Periods');
-ylabel('Deviation');
 
-%Plotting IRF for consumption
-nexttile;
-plot(1:nPeriods, dc_to_em_mode, 'LineWidth', 2);
-title('IRF of consumption to monetary policy shock (dc)');
-xlabel('Periods');
-ylabel('Deviation');
-
-%Plotting IRF for Investment
-nexttile;
-plot(1:nPeriods, dinve_to_em_mode, 'LineWidth', 2);
-title('IRF of Investment to monetary policy shock (dinve)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for wage
-nexttile;
-plot(1:nPeriods, dw_to_em_mode, 'LineWidth', 2);
-title('IRF of wage to monetary policy shock (dw)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for Inflation rate
-nexttile;
-plot(1:nPeriods, pinfobs_to_em_mode, 'LineWidth', 2);
-title('IRF of Inflation rate to monetary policy shock (pinfobs)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for Federal funds rate
-nexttile;
-plot(1:nPeriods, dc_to_em_mode, 'LineWidth', 2);
-title('IRF of federal funds rate to monetary policy shock (robs)');
-xlabel('Periods');
-ylabel('Deviation');
-
-
-%Plotting IRF for labor hours
-nexttile;
-plot(1:nPeriods, dc_to_em_mode, 'LineWidth', 2);
-title('IRF of labor hours to monetary policy shock (labobs)');
-xlabel('Periods');
-ylabel('Deviation');
 
 
 
