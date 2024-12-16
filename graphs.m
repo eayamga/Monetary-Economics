@@ -1,5 +1,5 @@
 % Run Dynare to generate the IRFs
-stoch_simul c n inv w rk R y K a;
+//stoch_simul c n inv w rk R y K a;
 
 
 % Extracting the IRF data
