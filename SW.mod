@@ -217,6 +217,6 @@ varobs dy dc dinve labobs pinfobs dw robs;
 
 stoch_simul(irf=40,irf_shocks=(ea,eqs,em),ar=5, conditional_variance_decomposition=[6,19,32], contemporaneous_correlation) y lab c k w r pinf inve
 
-estimation(optim=('MaxIter',2000),datafile=sw_repl,mode_compute=0,first_obs=1,presample=4,lik_init=2,prefilter=0,mh_replic=200000,mh_nblocks=4,mh_jscale=0.20,mh_drop=0.2,bayesian_irf,moments_varendo,posterior_graph,posterior_sampling_method = ('random_walk_metropolis_hastings'),conditional_variance_decomposition=[6,19,32],posterior_sampler_options = ('proposal_distribution','rand_multivariate_student','student_degrees_of_freedom', 3));
+estimation(optim=('MaxIter',2000),datafile=sw_repl,cova_compute=1,mode_compute=0,first_obs=1,presample=4,lik_init=2,prefilter=0,mh_replic=200000,mh_nblocks=4,mh_jscale=0.20,mh_drop=0.2,bayesian_irf,moments_varendo,posterior_graph,posterior_sampling_method = ('random_walk_metropolis_hastings'),conditional_variance_decomposition=[6,19,32],posterior_sampler_options = ('proposal_distribution','rand_multivariate_student','student_degrees_of_freedom', 3));
 
 shock_decomposition y pinf w;
